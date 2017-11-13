@@ -1,0 +1,21 @@
+<html>
+<!--  -->
+	<head>
+		<title> Entete de ma page exercice 30</title>
+		<link rel="stylesheet" href="exercicex.css"/>
+	</head>
+	
+	<body>
+		<h1>JS geolocalisation (base sur IP et reseau WIFI accessible</h1>
+		<script type="text/javascript">
+			function showPosition(position)
+			{
+				console.log(position.coords.latitude);
+				console.log(position.coords.longitude);
+				console.log(position.coords.altitude);
+				console.log("precision : " + position.coords.accuracy);  //precision
+			}
+					navigator.geolocation.getCurrentPosition(showPosition);
+					
+		</script>	
+			

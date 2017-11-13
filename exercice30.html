@@ -1,0 +1,27 @@
+<html>
+<!--  -->
+	<head>
+		<title> Entete de ma page exercice 30</title>
+		<link rel="stylesheet" href="exercicex.css"/>
+	</head>
+	
+	<body>
+		<h1>canvas</h1>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		<script type="text/javascript">
+		//recuperation de l element canvas
+			var canvas = document.getElementById("canvas")
+			var context = canvas.getContext("2d");
+			//dessin du rectangle   (fileRect = methode de objet contexte
+			context.fillRect(50,25,150,100);
+			// strokeStyle est un attribut ou propriete
+			//rgb red green blue
+			context.strokeStyle="rgb(255,100,0)";
+			//dessin de la bordure
+			context.strokeRect(500,250,150,100);
+		</script>	
+			
+		
+		
+	</body>
+</html>

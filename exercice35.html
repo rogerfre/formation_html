@@ -1,0 +1,54 @@
+<html>
+<!--  -->
+	<head>
+		<title> Entete de ma page exercice 35</title>
+		<link rel="stylesheet" href="exercicex.css"/>
+	</head>
+	
+	<body>
+		<h1>JS WEBSTORAGE</h1>
+		<p> c'est la <span id="x">x</span> ieme fois que vous visitez cette page :</p>
+		<script type="text/javascript">
+			function testLocalStorage()
+			{
+				if (typeof (localStorage)!= null)
+				{
+					//OK localStorage supporte
+					//affichage de la valeur dans localStorage qui a pour cle "utilisateurCourant"
+					console.log(localStorage["utilisateurCourant"]);
+					//redefinition de la valeur
+					localStorage["utilisateurCourant"] ="Jerome";
+					//reaffichage
+					console.log(localStorage["utilisateurCourant"]);
+					//delete de la valeur
+					delete localStorage["utilisateurCourant"];
+				}
+				else
+				{
+					console.log("localStorage non supporte");
+				}
+			}
+			// maj compteur visite dans le texte
+			function majCompteurNbVisite(nbVisite)
+			{
+				var compteur = document.getElementById("x");
+				compteur.innerHTML = nbVisite;   //modification htlm partie x pouer y mettre le compteur
+			}
+			//calcul du nombre de visite
+			function majNbVisites()
+			{
+				if ( typeof (localStorage)!= null)  //verification existance localStorage navigateur supporte ou pas
+				{
+					var nbVisites = 0;
+					if ( localStorage["nbVisites"] != null)
+					{
+						nbVisites = localStorage["nbVisites"];
+					}
+					localStorage["nbVisites"] = ++nbVisites;
+					majCompteurNbVisite(nbVisites);				
+				}
+			}
+			//appel de la fonction
+			majNbVisites();
+		</script>	
+			

@@ -1,0 +1,95 @@
+<html>
+<!--  -->
+	<head>
+		<title> Entete de ma page exercice 30</title>
+		<link rel="stylesheet" href="exercicex.css"/>
+	</head>
+	
+	<body>
+		<h1>JS canvas TP</h1>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		<script type="text/javascript">
+		//recuperation de l element canvas
+			var canvas = document.getElementById("canvas")
+			var context = canvas.getContext("2d");
+			//definition du parcours de la grille
+			for (var x = 0.5; x < 500; x+= 10) 
+			{
+				context.moveTo(x, 0);
+				context.lineTo(x, 375);
+			}
+		
+			for (var y = 0.5; y < 375; y+= 10)
+			{
+				context.moveTo(0, y);
+				context.lineTo(500, y);
+			}
+			//dessin quadrillage sur ce parcours
+			context.strokeStyle ="#eee";
+			context.stroke();
+			//type de police
+			context.font = "bold 12px sans-serif";
+			// ajout du x
+			context.fillText ("x", 248, 43);
+			// ajout du y
+			context.fillText ("y", 58, 165);
+			
+			//dessin des fleches horizontales
+			context.beginPath();
+			context.moveTo(0.5, 40);
+			context.lineTo(240, 40);
+			
+			context.moveTo(260, 40);
+			context.lineTo(500, 40);
+			//dessin des lignes des fleches sur ce parcours
+			context.strokeStyle ="black";
+			context.stroke();
+			//dessin des fleches verticales
+			context.beginPath();
+			context.moveTo(60, 0.5);
+			context.lineTo(60, 150);
+			
+			context.moveTo(60, 180);
+			context.lineTo(60, 375);
+			//dessin des lignes des fleches sur ce parcours
+			context.strokeStyle ="black";
+			context.stroke();
+			//dessin des pointes des fleches horizontal
+			context.beginPath();
+			context.moveTo(495, 35);
+			context.lineTo(500, 40);
+			context.moveTo(495, 45);
+			context.lineTo(500, 40);			
+			context.strokeStyle ="black";
+			context.stroke();
+			//dessin des pointes des fleches verticales
+			context.beginPath();
+			context.moveTo(55, 370);
+			context.lineTo(60, 375);
+			context.moveTo(60, 375);
+			context.lineTo(65, 370);
+			context.strokeStyle ="black";
+			context.stroke();
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>	
+			
+		
+		
+	</body>
+</html>

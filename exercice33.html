@@ -1,0 +1,42 @@
+<html>
+<!--  -->
+	<head>
+		<title> Entete de ma page exercice 30</title>
+		<link rel="stylesheet" href="exercicex.css"/>
+	</head>
+	
+	<body>
+		<h1>JS canvas gradient image</h1>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		<script type="text/javascript">
+		//recuperation de l element canvas
+			var canvas = document.getElementById("canvas")
+			var context = canvas.getContext("2d");
+			// creation image en js (la classe Image est définie dans le navigateur)
+			var monImage = new Image();
+			//definition src pour definir où telecharger image
+			// pour afficher image dans la le canvas
+			monImage.src = "Images/cat.jpg";
+			monImage.onload = function ()
+			{
+//				context.drawImage(monImage, 0 , 0);
+  				context.drawImage(monImage, 50 , 50);
+//				context.drawImage(monImage, 100 , 100,);
+//				context.drawImage(monImage, 150 , 150, 100 , 100);
+				
+			//recuperation dune partie dune image
+			// copie d'une partie d'une image
+			// 1er argument : image
+			// 4 arguments : source
+			// 4 arguments : destination
+				context.drawImage(monImage, 100 , 15, 250 , 50, 400 , 200,200,50);
+			};
+			
+			
+			
+			
+			
+			
+			
+		</script>	
+			

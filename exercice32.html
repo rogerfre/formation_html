@@ -1,0 +1,30 @@
+<html>
+<!--  -->
+	<head>
+		<title> Entete de ma page exercice 30</title>
+		<link rel="stylesheet" href="exercicex.css"/>
+	</head>
+	
+	<body>
+		<h1>JS canvas degrade</h1>
+		<canvas id="canvas" width="1000" height="1000"></canvas>
+		<script type="text/javascript">
+		//recuperation de l element canvas
+			var canvas = document.getElementById("canvas")
+			var context = canvas.getContext("2d");
+			//dégradé vertical de noir à blanc (0,0,0,255) 
+			var mygradient = context.createLinearGradient(0,0,0,255);
+			//si horizontal (255,0,0,0)
+			//var mygradient = context.createLinearGradient(255,0,0,0);
+			
+			mygradient.addColorStop(0, "black");
+			mygradient.addColorStop(1, "white");
+			context.fillStyle=mygradient;
+			context.fillRect(0,0,300,255);
+			
+		</script>	
+			
+		
+		
+	</body>
+</html>
